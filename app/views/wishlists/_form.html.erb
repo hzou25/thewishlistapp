@@ -1,0 +1,9 @@
+<%= form_for([@group, @group.wishlists.build]) do |f| %>
+  <p>
+    <%= f.label "Wishlist name" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

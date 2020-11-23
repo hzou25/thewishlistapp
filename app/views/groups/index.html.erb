@@ -1,0 +1,22 @@
+<h1> Howdy, you're on our groups page! </h1>
+
+<h3> A list of groups </h3>
+<table>
+  <tr>
+    <th> Group </th>
+    <th colspan = "1" ></th>
+  </tr>
+
+<% @groups.each do |group| %>
+  <tr>
+    <td><%= group.name %></td>
+    <td><%= link_to 'Show', group_path(group) %></td>
+    <td><%= link_to 'Edit', edit_group_path(group) %></td>
+    <td><%= link_to 'Join', edit_group_path(group) %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>
+<%= link_to 'New group', new_group_path %>
+</p>
