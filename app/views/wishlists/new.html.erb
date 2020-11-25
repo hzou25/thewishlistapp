@@ -1,4 +1,9 @@
-<%= form_for([@group, @group.wishlists.build]) do |f| %>
+
+
+
+
+<%= form_for([@wishlist, @wishlist.create]) do |f| %>
+<h1> New Wishlist </h1>
   <p>
     <%= f.label "Wishlist name" %><br>
     <%= f.text_field :name %>

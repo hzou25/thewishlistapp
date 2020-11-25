@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :groups do
-    resources :wishlists
-  end
+  root 'groups#index'
+
+  # resources :groups do
+  #   resources :wishlists
+  # end
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
@@ -12,5 +14,9 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy'
   get '/groups' => 'groups#index'
   post '/groups' => 'groups#create'
+
+  post '/wishlists' => 'wishlists#new'
+
+
 
 end
